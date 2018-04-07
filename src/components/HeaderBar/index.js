@@ -30,7 +30,7 @@ class HeaderBar extends React.Component {
     constructor(props){
         super(props);
         this.state = {
-            top: false
+            left: false
         }
     }
 
@@ -52,7 +52,7 @@ class HeaderBar extends React.Component {
                             />
                         </IconButton>
                         <Typography variant="title" color="inherit" className={classes.flex}>
-                            Title
+                            MaV
                         </Typography>
                         <Button color="inherit">Login</Button>
                     </Toolbar>
@@ -63,10 +63,7 @@ class HeaderBar extends React.Component {
                             onClick={this.toggleDrawer('left', false)}
                             onKeyDown={this.toggleDrawer('left', false)}
                         >
-                            <ul className={classes.list}>
-                                <li>sadsa</li>
-                                <li>sadsa</li>
-                            </ul>
+                            <SideNav className={classes.list}/>
                         </div>
                     </Drawer>
                 </AppBar>

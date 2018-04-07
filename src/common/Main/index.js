@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Switch, Route } from 'react-router-dom';
 import { withStyles } from 'material-ui/styles';
 import Home from '../../pages/Home/index';
+import Contact from '../../pages/Contact/index';
 
 const styles = theme =>({
     main: {
@@ -17,7 +18,7 @@ class Main extends Component {
             <main className={classes.main}>
                 <Switch>
                     <Route exact path='/' component={Home}/>
-                    {/*<Route exact path='/CaseDetails' component={Home}/>*/}
+                    <Route exact path='/contact' component={Contact}/>
                 </Switch>
             </main>
         )

@@ -1,42 +1,71 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from 'material-ui/styles';
-import Drawer from 'material-ui/Drawer';
-import Button from 'material-ui/Button';
-import List from 'material-ui/List';
-import Divider from 'material-ui/Divider';
 
+import { MenuList, MenuItem } from 'material-ui/Menu';
+import { ListItemIcon, ListItemText } from 'material-ui/List';
+import InboxIcon from 'material-ui-icons/MoveToInbox';
+import DraftsIcon from 'material-ui-icons/Drafts';
+import SendIcon from 'material-ui-icons/Send';
+import { Link } from 'react-router-dom';
 
-const styles = {
-    list: {
-        width: 250,
+const styles = theme => ({
+    menuItem: {
+        '&:focus': {
+            backgroundColor: theme.palette.primary.main,
+            '& $primary, & $icon': {
+                color: theme.palette.common.white,
+            },
+        },
     },
-    fullList: {
-        width: 'auto',
-    },
-};
+    primary: {},
+    icon: {},
+    link:{
+        textDecoration: 'none'
+    }
+});
+
 
 class SideNav extends React.Component {
-    state = {
-        top: false,
-        left: false,
-        bottom: false,
-        right: false,
-    };
-
-    toggleDrawer = (side, open) => () => {
-        this.setState({
-            [side]: open,
-        });
-    };
-
     render() {
         const { classes } = this.props;
         return (
-            <div>
-                <Button onClick={this.toggleDrawer('left', true)}>Open Left</Button>
-
-            </div>
+            <MenuList>
+                <Link className={classes.link} to="/">
+                    <MenuItem className={classes.menuItem}>
+                        <ListItemIcon className={classes.icon}>
+                            <SendIcon />
+                        </ListItemIcon>
+                        <ListItemText classes={{ primary: classes.primary }} inset primary="Home" />
+                    </MenuItem>
+                </Link>
+                <MenuItem className={classes.menuItem}>
+                    <ListItemIcon className={classes.icon}>
+                        <DraftsIcon />
+                    </ListItemIcon>
+                    <ListItemText classes={{ primary: classes.primary }} inset primary="Pricing" />
+                </MenuItem>
+                <MenuItem className={classes.menuItem}>
+                    <ListItemIcon className={classes.icon}>
+                        <InboxIcon />
+                    </ListItemIcon>
+                    <ListItemText classes={{ primary: classes.primary }} inset primary="Packing" />
+                </MenuItem>
+                <MenuItem className={classes.menuItem}>
+                    <ListItemIcon className={classes.icon}>
+                        <InboxIcon />
+                    </ListItemIcon>
+                    <ListItemText classes={{ primary: classes.primary }} inset primary="Storage" />
+                </MenuItem>
+                <Link className={classes.link} to="/contact">
+                    <MenuItem className={classes.menuItem}>
+                        <ListItemIcon className={classes.icon}>
+                            <InboxIcon />
+                        </ListItemIcon>
+                        <ListItemText classes={{ primary: classes.primary }} inset primary="Contact" />
+                    </MenuItem>
+                </Link>
+            </MenuList>
         );
     }
 }
