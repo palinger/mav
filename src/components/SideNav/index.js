@@ -4,9 +4,11 @@ import { withStyles } from 'material-ui/styles';
 
 import { MenuList, MenuItem } from 'material-ui/Menu';
 import { ListItemIcon, ListItemText } from 'material-ui/List';
-import InboxIcon from 'material-ui-icons/MoveToInbox';
-import DraftsIcon from 'material-ui-icons/Drafts';
-import SendIcon from 'material-ui-icons/Send';
+import LocalShippingIcon from 'material-ui-icons/LocalShipping';
+import ContactIcon from 'material-ui-icons/ContactMail';
+import MonetizationOnIcon from 'material-ui-icons/MonetizationOn';
+import StoreIcon from 'material-ui-icons/Store';
+import PackIcon from 'material-ui-icons/Dashboard';
 import { Link } from 'react-router-dom';
 
 const styles = theme => ({
@@ -34,33 +36,38 @@ class SideNav extends React.Component {
                 <Link className={classes.link} to="/">
                     <MenuItem className={classes.menuItem}>
                         <ListItemIcon className={classes.icon}>
-                            <SendIcon />
+                            <LocalShippingIcon />
                         </ListItemIcon>
                         <ListItemText classes={{ primary: classes.primary }} inset primary="Home" />
                     </MenuItem>
                 </Link>
+                <Link className={classes.link} to="/pricing">
+                    <MenuItem className={classes.menuItem}>
+                        <ListItemIcon className={classes.icon}>
+                            <MonetizationOnIcon />
+                        </ListItemIcon>
+                        <ListItemText classes={{ primary: classes.primary }} inset primary="Pricing" />
+                    </MenuItem>
+                </Link>
+                <Link className={classes.link} to="/packing">
+                    <MenuItem className={classes.menuItem}>
+                        <ListItemIcon className={classes.icon}>
+                            <PackIcon />
+                        </ListItemIcon>
+                        <ListItemText classes={{ primary: classes.primary }} inset primary="Packing" />
+                    </MenuItem>
+                </Link>
                 <MenuItem className={classes.menuItem}>
                     <ListItemIcon className={classes.icon}>
-                        <DraftsIcon />
-                    </ListItemIcon>
-                    <ListItemText classes={{ primary: classes.primary }} inset primary="Pricing" />
-                </MenuItem>
-                <MenuItem className={classes.menuItem}>
-                    <ListItemIcon className={classes.icon}>
-                        <InboxIcon />
-                    </ListItemIcon>
-                    <ListItemText classes={{ primary: classes.primary }} inset primary="Packing" />
-                </MenuItem>
-                <MenuItem className={classes.menuItem}>
-                    <ListItemIcon className={classes.icon}>
-                        <InboxIcon />
+                        <StoreIcon />
                     </ListItemIcon>
                     <ListItemText classes={{ primary: classes.primary }} inset primary="Storage" />
                 </MenuItem>
                 <Link className={classes.link} to="/contact">
                     <MenuItem className={classes.menuItem}>
                         <ListItemIcon className={classes.icon}>
-                            <InboxIcon />
+
+                            <ContactIcon />
                         </ListItemIcon>
                         <ListItemText classes={{ primary: classes.primary }} inset primary="Contact" />
                     </MenuItem>

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { withStyles } from 'material-ui/styles';
+import { Link } from 'react-router-dom';
 
 const styles = theme =>({
     footer: {
@@ -15,6 +16,8 @@ class Footer extends Component {
         return(
             <footer className={classes.footer}>
                 <p>Footer</p>
+                <Link to="/terms">terms</Link>
+                <Link to="/serviceGuarantee">service guarantee</Link>
             </footer>
         )
     }

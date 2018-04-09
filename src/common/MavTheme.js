@@ -33,7 +33,7 @@ export const MavTheme = createMuiTheme({
     overrides: {
         MuiButton: {
             sizeSmall: {
-                minWidth: '200px',
+
                 padding: '12px 8px',
             },
             label: {
