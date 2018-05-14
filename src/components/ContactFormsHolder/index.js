@@ -27,8 +27,10 @@ const styles = theme => ({
         backgroundColor: theme.palette.background.paper,
         width: "100%",
     },
-    paperPadding: {
-        padding: theme.spacing.unit * 3
+    paperLayout: {
+        padding: theme.spacing.unit * 3,
+        maxWidth: '980px',
+        margin: '0 auto'
     },
     bottomPadding: {
         paddingBottom: theme.spacing.unit * 3
@@ -56,9 +58,9 @@ class ContactFormsHolder extends React.Component {
         const { classes, theme } = this.props;
 
         return (
-            <Paper className={classes.paperPadding}>
+            <Paper className={classes.paperLayout}>
                 <Typography variant="title" color="inherit" gutterBottom>
-                    Form title
+                    Contact Form
                 </Typography>
                 <Typography variant="body1" color="inherit" className={classes.bottomPadding}>
                     Lorem ipsum dolor amet four loko shoreditch snackwave synth, kickstarter dreamcatcher tilde intelligentsia vexillologist succulents. Flannel prism pour-over, tumeric mumblecore four dollar toast +1 helvetica shabby chic affogato flexitarian copper mug. Pour-over tumeric messenger bag sustainable four dollar toast umami raclette shaman small batch vinyl stumptown before they sold out mustache fingerstache art party. 3 wolf moon direct trade forage, hoodie man bun deep v cloud bread air plant synth kogi echo park fixie vinyl. Aesthetic bushwick pinterest paleo fingerstache. IPhone asymmetrical keffiyeh next level banh mi prism YOLO gastropub four dollar toast art party vape authentic brunch man bun tousled.

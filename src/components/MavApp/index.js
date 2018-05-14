@@ -7,8 +7,7 @@ import Footer from '../../common/Footer/index';
 const styles = theme => ({
     columnLayout: {
         display: 'flex',
-        flexDirection: 'column',
-        height: '100vh'
+        flexDirection: 'column'
     }
 });
 

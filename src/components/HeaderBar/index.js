@@ -5,15 +5,12 @@ import AppBar from 'material-ui/AppBar';
 import Toolbar from 'material-ui/Toolbar';
 import Drawer from 'material-ui/Drawer';
 import Typography from 'material-ui/Typography';
-import Button from 'material-ui/Button';
 import IconButton from 'material-ui/IconButton';
 import MenuIcon from 'material-ui-icons/Menu';
 import SideNav from '../SideNav/index';
+import MainNav from '../MainNav';
 
 const styles = {
-    root: {
-        flexGrow: 1,
-    },
     flex: {
         flex: 1,
     },
@@ -54,7 +51,9 @@ class HeaderBar extends React.Component {
                         <Typography variant="title" color="inherit" className={classes.flex}>
                             MaV
                         </Typography>
-                        <Button color="inherit">Login</Button>
+
+                        <MainNav/>
+
                     </Toolbar>
                     <Drawer open={this.state.left} onClose={this.toggleDrawer('left', false)}>
                         <div

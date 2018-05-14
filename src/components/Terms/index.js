@@ -16,7 +16,7 @@ class TermsAndConditions extends React.Component {
         const {classes} = this.props;
         return (
             <Paper className={classes.root}>
-                <div class="mod-col col-md-12 col-md-12"><p></p>
+                <div><p></p>
                     <h1>Terms and conditions</h1>
                     <p>These conditions explain the rights, obligations, and responsibilities of all parties to this Agreement. Where we use the word “you” or “your” it means the Customer: “we”, “us” or “our” means the Remover. These terms and conditions can be varied or amended subject to prior written agreement. Your attention is drawn to Clauses 4, 9, 10, 11 and 12 which set out our liability to you for loss of or damage to goods and property.</p>
                     <p><strong>1.Our Quotation</strong></p>

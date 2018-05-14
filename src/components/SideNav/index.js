@@ -57,12 +57,14 @@ class SideNav extends React.Component {
                         <ListItemText classes={{ primary: classes.primary }} inset primary="Packing" />
                     </MenuItem>
                 </Link>
-                <MenuItem className={classes.menuItem}>
-                    <ListItemIcon className={classes.icon}>
-                        <StoreIcon />
-                    </ListItemIcon>
-                    <ListItemText classes={{ primary: classes.primary }} inset primary="Storage" />
-                </MenuItem>
+                <Link className={classes.link} to="/storage">
+                    <MenuItem className={classes.menuItem}>
+                        <ListItemIcon className={classes.icon}>
+                            <StoreIcon />
+                        </ListItemIcon>
+                        <ListItemText classes={{ primary: classes.primary }} inset primary="Storage" />
+                    </MenuItem>
+                </Link>
                 <Link className={classes.link} to="/contact">
                     <MenuItem className={classes.menuItem}>
                         <ListItemIcon className={classes.icon}>

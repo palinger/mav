@@ -16,7 +16,7 @@ class ServiceGuarantee extends React.Component {
         const {classes} = this.props;
         return (
             <Paper className={classes.root}>
-                <div class="mod-col col-md-12 col-md-12"><p></p>
+                <div><p></p>
                     <h2>Our Service</h2>
                     <p><strong>To give customers strong service assurances Man and Vans have drawn up the following service guarantees. If existing customers believe that we have not lived up to the assurances written below please call us and we will chat through with you and compensate where agreed.</strong></p>
                     <ol>
